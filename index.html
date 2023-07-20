@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="background">
+        <img
+          class="logo"
+          src="./images/file-lock.svg"
+          alt="file lock"
+          width="50"
+        />
+        <h5>Password Generator</h5>
+        <div class="passwordContainer">
+          <h1 class="password">************</h1>
+        </div>
+
+        <div class="strength">
+          <p class="strengthText">...</p>
+        </div>
+
+        <div class="sliderRangeF">
+          <p id="customSliderPrompt">Password length:</p>
+
+          <div id="sliderValue">0</div>
+        </div>
+        <input type="range" id="slider" min="1" max="12" step="1" value="1" />
+        <div class="checkbox">
+          <div class="left side">
+            <div class="checkboxText">Uppercase</div>
+            <div class="checkboxText">Lowercase</div>
+            <div class="checkboxText">Special caracters</div>
+            <div class="checkboxText">Numbers</div>
+          </div>
+
+          <div class="right side">
+            <div>
+              <input
+                type="checkbox"
+                class="first check"
+                checked="true"
+                onclick="handleSliderInput()"
+              />
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                class="second check"
+                onclick="handleSliderInput()"
+              />
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                class="third check"
+                onclick="handleSliderInput()"
+              />
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                class="fourth check"
+                onclick="handleSliderInput()"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js" charset="UTF-8"></script>
+  </body>
+</html>
